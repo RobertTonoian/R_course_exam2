@@ -50,16 +50,18 @@ Returns a named list.
 
 ## **Package Structure**
 
+```
 R_course_exam2/
 ├── R/
-│    ├── preprocess_text.R
-│    ├── match_words.R
-│    └── summarize_sentiment.R
+│   ├── preprocess_text.R
+│   ├── match_words.R
+│   └── summarize_sentiment.R
 ├── DESCRIPTION
 ├── NAMESPACE
 ├── man/
 ├── R_course_exam2.Rproj
 ├── README.md
+```
 
 ---
 
@@ -83,26 +85,29 @@ neg_count <- match_words(words, negative)
 # Summarise sentiment
 summary <- summarize_sentiment(words, positive, negative)
 print(summary)
+```
 
+---
 
-⸻
-
-Installation
+## **Installation**
 
 Clone or download the repository:
 
+```bash
 git clone https://github.com/RobertTonoian/R_course_exam2.git
+```
 
 Then open the project in RStudio and build the package using:
 
+```
 Build → Build & Reload
+```
 
+---
 
-⸻
+## **Author**
 
-Author
-
-Robert Tonoian
-Department of Cell and Molecular Biology
-Karolinska Institutet
+**Robert Tonoian**  
+Department of Cell and Molecular Biology  
+Karolinska Institutet  
 HT2025 Intermediate R Course
