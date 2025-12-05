@@ -1,16 +1,20 @@
-Package: RTexam2
+Package: R_course_exam2
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Simple Semantic Text Analysis for Positive and Negative Word Detection
 Version: 0.1.0
-Authors@R: c(
-    person(
-      "Jane", "Doe",
-      email = "jane@example.com",
-      role = c("aut", "cre")
-    )
-  )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
-License: What license is it under?
+Author: Robert Tonoian
+Maintainer: Robert Tonoian <tonoiainrk@gmail.com>
+Description: A lightweight package developed for the HT2025 Intermediate R Programming Course group exam. 
+    It provides functions to preprocess text, match words against semantic dictionaries 
+    with optional wildcard support, and summarise positive and negative sentiment in a document.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+Depends: R (>= 4.3)
+Imports:
+    stringr
+Suggests:
+    knitr,
+    rmarkdown
