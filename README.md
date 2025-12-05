@@ -1,7 +1,10 @@
 # **Semantic Text Analysis Package**
 
+[![R](https://img.shields.io/badge/R-package-blue.svg)](https://www.r-project.org/)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-R__course__exam2-black?logo=github)](https://github.com/RobertTonoian/R_course_exam2)
+
 This R package provides a simple semantic algorithm for identifying and summarising positive and negative words in a text document.  
-It is developed as part of the HT2025 Intermediate R Programming Course – Group Exam 2.
+It was developed as part of the **HT2025 Intermediate R Programming Course – Group Exam 2** at **Karolinska Institutet**.
 
 ---
 
@@ -16,23 +19,23 @@ The package implements a three-step workflow:
 - Split sentences into individual words  
 
 ### **2. Match semantic categories**
-- Compare document words to user-defined positive and negative dictionaries  
-- Support simple wildcard matching using the suffix `*`  
-  - Example: `"happy*"` matches `happy`, `happiness`  
+- Compare words to user-defined positive and negative dictionaries  
+- Support wildcard suffix matching (`*`)  
+  - Example: `"happy*"` matches `happy`, `happiness`
 
 ### **3. Summarise sentiment**
 - Count positive and negative matches  
-- Return absolute counts and a simple sentiment ratio  
+- Return absolute counts and a sentiment ratio  
 
 ---
 
 ## **Main Functions**
 
 ### **`preprocess_text(filepath)`**
-Reads a `.txt` file, cleans the text, and returns a vector of individual words.
+Reads a `.txt` file, cleans text, and returns a vector of words.
 
 ### **`match_words(word_vector, dictionary)`**
-Counts how many words in the document match entries in the provided dictionary  
+Counts how many words match entries in the dictionary  
 (including wildcard matches).
 
 ### **`summarize_sentiment(word_vector, positive_dict, negative_dict)`**
@@ -41,56 +44,65 @@ Computes:
 - number of negative matches  
 - sentiment ratio  
 
-Returns a summary list or data frame.
+Returns a named list.
 
 ---
 
 ## **Package Structure**
+
 R_course_exam2/
-  ├── R/
-  │    ├── preprocess_text.R
-  │    ├── match_words.R
-  │    └── summarize_sentiment.R
-  ├── DESCRIPTION
-  ├── NAMESPACE
-  ├── man/
-  ├── R_course_exam2.Rproj
-  ├── README.md
+├── R/
+│    ├── preprocess_text.R
+│    ├── match_words.R
+│    └── summarize_sentiment.R
+├── DESCRIPTION
+├── NAMESPACE
+├── man/
+├── R_course_exam2.Rproj
+├── README.md
 
 ---
 
 ## **Example Usage**
 
 ```r
-### Load package
+# Load package
 library(R_course_exam2)
 
-### Preprocess text
+# Preprocess text
 words <- preprocess_text("Example_negative.txt")
 
-### Define dictionaries
+# Define dictionaries
 positive <- c("happy*", "good", "love", "nice")
 negative <- c("sad*", "angry*", "hate", "bad")
 
-### Match words
+# Match words
 pos_count <- match_words(words, positive)
 neg_count <- match_words(words, negative)
 
-### Summarise sentiment
+# Summarise sentiment
 summary <- summarize_sentiment(words, positive, negative)
 print(summary)
 
----
 
-## **Installation**
+⸻
+
+Installation
 
 Clone or download the repository:
+
 git clone https://github.com/RobertTonoian/R_course_exam2.git
 
----
+Then open the project in RStudio and build the package using:
 
-## **Author**
+Build → Build & Reload
+
+
+⸻
+
+Author
 
 Robert Tonoian
+Department of Cell and Molecular Biology
 Karolinska Institutet
-HT2025 Intemediate R Course
+HT2025 Intermediate R Course
