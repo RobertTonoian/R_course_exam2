@@ -1,7 +1,7 @@
 # **Semantic Text Analysis Package**
 
 [![R](https://img.shields.io/badge/R-package-blue.svg)](https://www.r-project.org/)
-[![GitHub Repository](https://img.shields.io/badge/GitHub-R__course__exam2-black?logo=github)](https://github.com/RobertTonoian/R_course_exam2)
+[![GitHub Repository](https://img.shields.io/badge/GitHub-Rcourse.exam2-black?logo=github)](https://github.com/RobertTonoian/Rcourse.exam2)
 
 This R package provides a simple semantic algorithm for identifying and summarising positive and negative words in a text document.  
 It was developed as part of the **HT2025 Intermediate R Programming Course – Group Exam 2** at **Karolinska Institutet**.
@@ -51,7 +51,7 @@ Returns a named list.
 ## **Package Structure**
 
 ```
-R_course_exam2/
+Rcourse.exam2/
 ├── R/
 │   ├── preprocess_text.R
 │   ├── match_words.R
@@ -59,7 +59,7 @@ R_course_exam2/
 ├── DESCRIPTION
 ├── NAMESPACE
 ├── man/
-├── R_course_exam2.Rproj
+├── Rcourse.exam2.Rproj
 ├── README.md
 ```
 
@@ -69,7 +69,7 @@ R_course_exam2/
 
 ```r
 # Load package
-library(R_course_exam2)
+library(Rcourse.exam2)
 
 # Preprocess text
 words <- preprocess_text("Example_negative.txt")
@@ -94,7 +94,7 @@ print(summary)
 Clone or download the repository:
 
 ```bash
-git clone https://github.com/RobertTonoian/R_course_exam2.git
+git clone https://github.com/RobertTonoian/Rcourse.exam2.git
 ```
 
 Then open the project in RStudio and build the package using:
