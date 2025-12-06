@@ -56,11 +56,12 @@ Rcourse.exam2/
 │   ├── preprocess_text.R
 │   ├── match_words.R
 │   └── summarize_sentiment.R
+├── man/
 ├── DESCRIPTION
 ├── NAMESPACE
-├── man/
-├── Rcourse.exam2.Rproj
 ├── README.md
+├── Rcourse.exam2.Rproj
+├── Example_negative.txt
 ```
 
 ---
@@ -69,6 +70,7 @@ Rcourse.exam2/
 
 ```r
 # Load package
+devtools::install()
 library(Rcourse.exam2)
 
 # Preprocess text
@@ -76,7 +78,10 @@ words <- preprocess_text("Example_negative.txt")
 
 # Define dictionaries
 positive <- c("happy*", "good", "love", "nice")
-negative <- c("sad*", "angry*", "hate", "bad")
+
+negative <- c("fatigue*", "tired*", "heavy*", "nause*",
+              "restless*", "frustrat*", "trapped*", "sick*"
+)
 
 # Match words
 pos_count <- match_words(words, positive)
